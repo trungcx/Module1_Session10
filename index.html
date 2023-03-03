@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module1-Session10</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    <!-- Common -->
+    <article id="exercise1">
+        <h2>Bài tập 1: Tính chỉ số BMI</h2>
+        <p id="exercise1_height">Nhập chiều cao (cm)</p>
+        <input id="exercise1_input_height" type="text" onchange="exercise1_function()">
+        <p id="exercise1_weight">Nhập cân nặng (kg)</p>
+        <input id="exercise1_input_weight" type="text" onchange="exercise1_function()"><br>
+        <span>BMI : </span>
+        <span id="exercise1_bmi"></span><br>
+        <span id="exercise1_result"></span>
+    </article>
+    <article id="exercise5">
+        <h2>Bài tập 5: Do you love me?</h2>
+        <p>Do you love me ?</p>
+        <button id="exercise5_yes" onclick="exercise5_yes_function()">YES</button>
+        <button id="exercise5_no" onmouseover="exercise5_no_move()" onmouseout="exercise5_no_default()">NO</button>
+    </article>
+    <article id="practise_plusEx">
+        <h2>Thực hành: Hai số bằng nhau</h2>
+        <button id="practise_plusEx_button" onclick="practise_plusEx_function()">Click to start</button>
+    </article>
+    <article id="practise_daysInMonth">
+        <h2>Số ngày trong tháng</h2>
+        <button id="practise_daysInMonth_button" onclick="practise_daysInMonth_button_function()">Click to start</button>
+    </article>
+    <article id="practise1">
+        <h2>Thực hành 1: Kiểm tra năm nhuận</h2>
+        <p>Nhập vào năm bất kỳ</p>
+        <input type="text" id="practise1_input">
+        <button id="practise1_check_button" onclick="practise1_function()">Check</button><br>
+        <p id="practise1_result"></p>
+    </article>
+    <article id="practise2">
+        <h2>Thực hành 2: Luyện tập if/else</h2>
+        <button id="practise2_start_button" onclick="practise2_function()">Click to start</button>
+    </article>
+    <article id="practise3">
+        <h2>Thực hành 3: Luyện tập if/else (2)</h2>
+        <button id="practise3_start_button" onclick="practise3_function()">Click to start</button>
+    </article>
+    <article id="practise4">
+        <h2>Thực hành 4: Luyện tập với cấu trúc switch-case</h2>
+        <button id="practise4_start_button" onclick="practise4_function()">Click to start</button>
+    </article>
+    <article id="practise5">
+        <h2>Thực hành 5: Luyện tập với toán tử ba ngôi</h2>
+        <button id="practise5_start_button" onclick="practise5_function()">Click to start</button>
+    </article>
+    <article id="practise6">
+        <h2>Thực hành 6: Sự kiện chuột</h2>
+        <img id="practise6_ball" src="./image/ball.jpg" alt="">
+        <p>Click để di chuyển bóng</p>
+        <button id="practise6_start_button" onclick="practise6_function()">Click me</button>
+    </article>
+    <article id="practise7">
+        <h2>Thực hành 7: Sự kiện bàn phím</h2>
+        <p>Dùng các phím mũi tên để di chuyển</p>
+        <div id="practise7_imgContainer">
+            <img id="practise7_image" src="./image/dancingguys.JPG" alt=""><br>
+        </div>
+        <!-- <button id="practise7_start_button" onclick="practise7_moveSelection()">Click to start</button> -->
+           
+    </article>
+    
+    <script src="main.js"></script>
+</body>
+</html>
