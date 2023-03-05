@@ -1,6 +1,6 @@
 //Common
 window.onload = practise6_init(), exercise5_init();
-// window.onload = practise7_init_and_eventListener();
+window.onload = practise7_init_and_eventListener();
 function practise6_init(){
     // init position
     let practise6_img = document.getElementById("practise6_ball");
@@ -15,6 +15,111 @@ function practise7_init_and_eventListener(){
     practise7_img.style.top = "0px"
 
     window.addEventListener("keydown",practise7_moveSelection);
+}
+// Bài tập 4: Game puzzle
+
+// Bài tập 3: Máy tính đơn giản
+let globalFirstElementEx3 = 0;
+let globalSecondElementEx3 = 0;
+let globalOperator = "";
+function calculator_elements_one(){
+    let monitor = document.getElementById("calculator_monitor");
+    monitor.innerHTML = monitor.innerHTML+"1";
+    // console.log();
+}
+function calculator_elements_two(){
+    let monitor = document.getElementById("calculator_monitor");
+    monitor.innerHTML = monitor.innerHTML+"2";
+}
+function calculator_elements_three(){
+    let monitor = document.getElementById("calculator_monitor");
+    monitor.innerHTML = monitor.innerHTML+"3";
+}
+function calculator_elements_four(){
+    let monitor = document.getElementById("calculator_monitor");
+    monitor.innerHTML = monitor.innerHTML+"4";
+    console.log();
+}
+function calculator_elements_five(){
+    let monitor = document.getElementById("calculator_monitor");
+    monitor.innerHTML = monitor.innerHTML+"5";
+}
+function calculator_elements_six(){
+    let monitor = document.getElementById("calculator_monitor");
+    monitor.innerHTML = monitor.innerHTML+"6";
+}
+function calculator_elements_seven(){
+    let monitor = document.getElementById("calculator_monitor");
+    monitor.innerHTML = monitor.innerHTML+"7";
+    console.log();
+}
+function calculator_elements_eight(){
+    let monitor = document.getElementById("calculator_monitor");
+    monitor.innerHTML = monitor.innerHTML+"8";
+}
+function calculator_elements_nine(){
+    let monitor = document.getElementById("calculator_monitor");
+    monitor.innerHTML = monitor.innerHTML+"9";
+}
+function calculator_elements_zero(){
+    let monitor = document.getElementById("calculator_monitor");
+    monitor.innerHTML = monitor.innerHTML+"0";
+}
+function calculator_elements_add(){
+    let monitor = document.getElementById("calculator_monitor");
+    let firstElement = monitor.innerHTML;
+    monitor.innerHTML = "";
+    globalFirstElementEx3 = parseInt(firstElement);
+    globalOperator = "+";
+}
+function calculator_elements_sub(){
+    let monitor = document.getElementById("calculator_monitor");
+    let firstElement = monitor.innerHTML;
+    monitor.innerHTML = "";
+    globalFirstElementEx3 = parseInt(firstElement);
+    globalOperator = "-";
+}
+function calculator_elements_mul(){
+    let monitor = document.getElementById("calculator_monitor");
+    let firstElement = monitor.innerHTML;
+    monitor.innerHTML = "";
+    globalFirstElementEx3 = parseInt(firstElement);
+    globalOperator = "*";
+}
+function calculator_elements_div(){
+    let monitor = document.getElementById("calculator_monitor");
+    let firstElement = monitor.innerHTML;
+    monitor.innerHTML = "";
+    globalFirstElementEx3 = parseInt(firstElement);
+    globalOperator = "/";
+}
+function calculator_elements_result(){
+    let monitor = document.getElementById("calculator_monitor");
+    let secondElement = monitor.innerHTML;
+    globalSecondElementEx3 = parseInt(secondElement);
+    switch(globalOperator){
+        case "+":
+            monitor.innerHTML = (globalFirstElementEx3 + globalSecondElementEx3);
+            break;
+        case "-":
+            monitor.innerHTML = (globalFirstElementEx3 - globalSecondElementEx3);
+            break;
+        case "*":
+            monitor.innerHTML = (globalFirstElementEx3 * globalSecondElementEx3);
+            break;
+        case "/":
+            monitor.innerHTML = (globalFirstElementEx3 / globalSecondElementEx3);
+            break;
+        default:  monitor.innerHTML = "error"
+            break;
+    }
+}
+function calculator_elements_clear(){
+    globalFirstElementEx3 = 0;
+    globalSecondElementEx3 = 0;
+    globalOperator = "";
+    let monitor = document.getElementById("calculator_monitor");
+    monitor.innerHTML = "";
 }
 // Bài tập 1: Tính chỉ số BMI
 function exercise1_function(){
@@ -32,6 +137,33 @@ function exercise1_function(){
         result.innerHTML = "Thừa cân, tiền béo phì";
     } else{
         result.innerHTML = "Béo phì";
+    }
+}
+// Bài tập 2: Số ngày trong tháng
+function practise_daysInMonth_button_function(){
+    let inputMonth = +prompt("Nhập tháng đi bạn: ")
+    switch(inputMonth){
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            alert(`Tháng ${inputMonth} có 31 ngày`);
+            break;                
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            alert(`Tháng ${inputMonth} có 30 ngày`);
+            break;              
+        case 2:
+            alert(`Tháng ${inputMonth} có 28 or 29 ngày`);
+            break;
+        default:
+            alert("Nhập lại đi bạn!");
+            break;
     }
 }
 // Bài tập 5: Do you love me?
@@ -61,33 +193,6 @@ function practise_plusEx_function(){
     let c = +prompt("Nhap vao c: ");
     if(a==b && a > c){
         // 
-    }
-}
-// Thực hành: Số ngày trong tháng
-function practise_daysInMonth_button_function(){
-    let inputMonth = +prompt("Nhập tháng đi bạn: ")
-    switch(inputMonth){
-        case 1:
-        case 3:
-        case 5:
-        case 7:
-        case 8:
-        case 10:
-        case 12:
-            console.log(`Tháng ${inputMonth} có 31 ngày`);
-            break;                
-        case 4:
-        case 6:
-        case 9:
-        case 11:
-            console.log(`Tháng ${inputMonth} có 30 ngày`);
-            break;              
-        case 2:
-            console.log(`Tháng ${inputMonth} có 28 or 29 ngày`);
-            break;
-        default:
-            console.log("Nhập lại đi bạn!");
-            break;
     }
 }
 // Thực hành 1: Kiểm tra năm nhuận
