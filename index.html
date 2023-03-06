@@ -8,16 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head> 
 <body>
-    <!-- Common -->
-    <article id="exercise4">
-        <h2>Bài tập 4: Game Puzzle</h2>
-        <div>
-            <img src="./image/DSC06310.jpg" alt="">
-        </div>
-        
-        <img src="./image/DSC06320.jpg" alt="">
-        <img src="./image/DSC06612.jpg" alt="">
-    </article>
+    <!-- Common --> 
     <article id="exercise1">
         <h2>Bài tập 1: Tính chỉ số BMI</h2>
         <p id="exercise1_height">Nhập chiều cao (cm)</p>
@@ -56,12 +47,29 @@
             </ul>
         </div>   
     </article>
+    <article id="exercise4">
+        <h2>Bài tập 4: Game Puzzle</h2>
+        <div id="exercise4_container">
+            <img id="exercise4_image1st" src="./image/anh1-1.JPG" onclick="exercise4_image1_fnt()" alt="">
+            <img id="exercise4_image2nd" src="./image/anh2-2.JPG" onclick="exercise4_image2_fnt()" alt="">
+            <img id="exercise4_image3rd" src="./image/anh3-3.JPG" onclick="exercise4_image3_fnt()" alt="">
+        </div>
+    </article>
     <article id="exercise5">
         <h2>Bài tập 5: Do you love me?</h2>
         <p>Do you love me ?</p>
         <button id="exercise5_yes" onclick="exercise5_yes_function()">YES</button>
         <button id="exercise5_no" onmouseover="exercise5_no_move()" onmouseout="exercise5_no_default()">NO</button>
     </article>
+    <article id="exercise6">
+        <h2>Bài tập 6: Ứng dụng good-fast-cheap</h2>
+        <p>Good</p>
+        <input id="exercise6_good" type="range" min="0" max="1" value="0" onmousedown="exercise6_good_fnt()">
+        <p>Fast</p>
+        <input id="exercise6_fast" type="range" min="0" max="1" value="0" onmousedown="exercise6_fast_fnt()">
+        <p>Cheap</p>
+        <input id="exercise6_cheap" type="range" min="0" max="1" value="0" onmousedown="exercise6_cheap_fnt()">
+    </article> 
     <article id="practise_plusEx">
         <h2>Thực hành: Hai số bằng nhau</h2>
         <button id="practise_plusEx_button" onclick="practise_plusEx_function()">Click to start</button>

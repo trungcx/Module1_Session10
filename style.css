@@ -43,7 +43,16 @@ h2{
     background-color: rgba(245, 245, 245, 0.808);
 }
  /* Bài tập 4: Game puzzle */
- #exercise4 img{
-    width: 300px;
+ #exercise4_container {
+    display: flex;
+    flex-direction: column;
+    
+    border: 3px solid red;
+    /* box-shadow: 5x 5x red; */
  }
+ #exercise4_container img{
+    width: 300px;
+    padding: 1px;  
+ }
+
 
